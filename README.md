@@ -13,16 +13,16 @@ Clone this repository inside a new or pre-existing catkin workspace and simply r
 ### Running
 1. You can run the ROS service server using rosrun with the package name as follows:
 
-```source devel/setup.bash```
+  ```source devel/setup.bash```
 
-```rosrun nirscan_driver nirscan_spec_server```
+  ```rosrun nirscan_driver nirscan_spec_server```
 
 2. After running the server as described above, a ROS parameter called "/nirscan_ssh_login" is created with a default value of "root@192.168.0.10". You should alter this parameter to match the ssh username and IP address that corresponds to your NIRScan device. An example is shown below:
 
-```rosparam set /nirscan_ssh_login "root@192.168.1.30"```
+  ```rosparam set /nirscan_ssh_login "root@192.168.1.30"```
 
-2. Finally, you can make a call to the ROS service as follows:
+3. Finally, you can make a call to the ROS service as follows:
 
-  Run Calibration Scan: ```rosservice call /nirscan_spec_calibration_scan```
+    Run Calibration Scan: ```rosservice call /nirscan_spec_calibration_scan```
   
-  Run Reflectance Scan: ```rosservice call /nirscan_spec_reflection_scan```
+    Run Reflectance Scan: ```rosservice call /nirscan_spec_reflection_scan```
